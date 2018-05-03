@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aup-u2-q6U">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="boL-rG-sJo">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="aup-u2-q6U" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WvA-Oh-Xp4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PJS-NM-QI0" kind="relationship" relationship="rootViewController" id="brs-DB-BhE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmi-n4-jVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="-247"/>
+        </scene>
+        <!--Progress Vc-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ProgressVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ProgressVc" customModule="ProgressLoadingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-V0-mfm">
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="w7P-DI-cFj">
+                                        <frame key="frameInset" minX="36" minY="14" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.050980392156862744" green="0.1803921568627451" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Wait..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-nl-7jn">
+                                        <frame key="frameInset" minX="8" minY="59" width="93" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="textColor" red="0.050980392156862744" green="0.1803921568627451" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="sIa-UP-5nz"/>
+                                    <constraint firstAttribute="width" constant="109" id="xCv-HY-AVX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.0" green="0.98306361607142856" blue="0.070172991071428575" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mOx-V0-mfm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Ld-ea-5kT"/>
+                            <constraint firstItem="mOx-V0-mfm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3T-PH-7GP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblProgressText" destination="9cG-nl-7jn" id="DwR-qm-iiL"/>
+                        <outlet property="myActivity" destination="w7P-DI-cFj" id="RfC-4A-Mjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170.625" y="-999.29577464788736"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GCJ-PR-tcB">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PJS-NM-QI0" customClass="ViewController" customModule="ProgressLoadingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vNM-Ha-I2w"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dfh-NX-qnz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2V1-PD-cbc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-XL-oR7">
+                                <color key="backgroundColor" red="0.96242254969999996" green="0.72143405679999995" blue="0.23739826680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z6c-TX-8yW"/>
+                                </constraints>
+                                <state key="normal" title="Loading - 5 secs"/>
+                                <connections>
+                                    <action selector="ShowLoading:" destination="PJS-NM-QI0" eventType="touchUpInside" id="uVf-fM-PC1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlb-lm-qZO">
+                                <color key="backgroundColor" red="0.96242254969999996" green="0.72143405679999995" blue="0.23739826680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S2J-md-ZDi"/>
+                                </constraints>
+                                <state key="normal" title="Please Wait... - 5 secs"/>
+                                <connections>
+                                    <action selector="ShowLoading:" destination="PJS-NM-QI0" eventType="touchUpInside" id="fBQ-A8-Slz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96242254969999996" green="0.96300223214285718" blue="0.53395647321428574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jlb-lm-qZO" firstAttribute="top" secondItem="4NN-XL-oR7" secondAttribute="bottom" constant="8" id="36V-Ti-sYw"/>
+                            <constraint firstAttribute="trailing" secondItem="4NN-XL-oR7" secondAttribute="trailing" constant="57" id="9Nu-xO-q7j"/>
+                            <constraint firstItem="4NN-XL-oR7" firstAttribute="leading" secondItem="2V1-PD-cbc" secondAttribute="leading" constant="56" id="C5f-Vv-hck"/>
+                            <constraint firstItem="jlb-lm-qZO" firstAttribute="leading" secondItem="2V1-PD-cbc" secondAttribute="leading" constant="56" id="LzK-mV-E8G"/>
+                            <constraint firstAttribute="trailing" secondItem="jlb-lm-qZO" secondAttribute="trailing" constant="57" id="Ryy-dA-fM3"/>
+                            <constraint firstItem="4NN-XL-oR7" firstAttribute="top" secondItem="vNM-Ha-I2w" secondAttribute="bottom" constant="23" id="t6b-mM-tyC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OCX-Xd-552"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUL-B5-9AA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170.625" y="-247.18309859154931"/>
+        </scene>
+    </scenes>
+</document>
